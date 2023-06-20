@@ -1,0 +1,94 @@
+    /* Fonts-Family */
+    $headers-font: 'Playfair Display', serif; 
+    $paragraphs-font: 'Lato', sans-serif;
+    $logo-font: 'Leckerli One', cursive;
+
+    /* Fonts-color */
+    $headers-color: #D4DBE3;
+    $paragraphs-color: #A8B2BB;
+    $contrast-color: #6B8DA4;
+    /* Blocks */
+    $main-background-color: #0D1117;
+    $containers-color: #161B22;
+    $alternative-color: #0B0F14;
+    $scrollbar-color: #090910;
+    $contrast-color: #6B8DA4;
+    /* Buttons */
+    $main-buttons-color: #1A3328;
+    $LinkedIn-button-color: #0A1A2B;
+    $Github-button-color:#131618;
+    $CV-button-color: #3B1818;
+    
+/* Reset CSS Instructions. */
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* Instruction to reset the initial settings of html */
+html
+{   
+    scroll-behavior: smooth;
+}
+
+img, picture, video, iframe, figure
+{
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+a
+{
+    display: block;
+}
+
+p a
+{
+    display: inline;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, em
+{
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+form, input, textarea, select, button, label
+{
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    display: block;
+    color: inherit;
+}
+
+svg
+{
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+body
+{
+    min-height: 100vh;
+    font-size: 100%;
+    line-height: 1.4em;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
