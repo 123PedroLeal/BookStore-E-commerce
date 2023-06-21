@@ -1,7 +1,3 @@
-/* Fonts-Family */
-/* Fonts-color */
-/* Blocks */
-/* Buttons */
 /* Reset CSS Instructions. */
 * {
   box-sizing: border-box;
@@ -65,4 +61,227 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.Wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: #4b33a8;
+}
+.Wrapper .Wrapper-aside {
+  padding: 2rem;
+  padding-right: 0;
+  color: #ececec;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Wrapper .Wrapper-aside .Header-logo {
+  font-family: "Leckerli One", cursive;
+  font-size: 1.375rem;
+  margin-bottom: 1rem;
+}
+.Wrapper .Wrapper-aside .Nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.Wrapper .Wrapper-aside .u-button {
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: bold;
+  padding: 0.75rem;
+  border-radius: 1rem 0 0 1rem;
+  position: relative;
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.Wrapper .Wrapper-aside .u-button::before, .Wrapper .Wrapper-aside .u-button::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 2rem;
+  right: 0;
+  background-color: transparent;
+  box-shadow: 0 1rem 0 transparent, 0 -1rem 0 transparent;
+  transition: box-shadow 0.5s;
+}
+.Wrapper .Wrapper-aside .u-button::before {
+  bottom: 100%;
+  border-bottom-right-radius: 0.5rem;
+}
+.Wrapper .Wrapper-aside .u-button::after {
+  top: 100%;
+  border-top-right-radius: 0.5rem;
+}
+.Wrapper .Wrapper-aside .u-button.isActive, .Wrapper .Wrapper-aside .u-button:hover {
+  background-color: #ececec;
+  color: #4b33a8;
+  width: 100%;
+}
+.Wrapper .Wrapper-aside .u-button.isActive::before, .Wrapper .Wrapper-aside .u-button:hover::before {
+  box-shadow: 0 1rem 0 #ececec; /* Cambia el color de la sombra al hacer hover o estar activo */
+}
+.Wrapper .Wrapper-aside .u-button.isActive::after, .Wrapper .Wrapper-aside .u-button:hover::after {
+  box-shadow: 0 -1rem 0 #ececec; /* Cambia el color de la sombra al hacer hover o estar activo */
+}
+.Wrapper .Wrapper-aside .button-cart {
+  margin-top: 2rem;
+}
+.Wrapper .Wrapper-aside .Footer-text {
+  color: #785ce9;
+  font-size: 0.75rem;
+}
+.Wrapper .Main {
+  background-color: #ececec;
+  margin: 1rem;
+  border-radius: 2rem;
+  padding: 3rem 1.5rem;
+  margin-left: 0;
+}
+.Wrapper .Main .Main-title {
+  color: #4b33a8;
+  margin-bottom: 2rem;
+}
+.Wrapper .Main .Product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.Wrapper .Main .Product-container .Product {
+  position: relative;
+  box-shadow: 0.3rem 0.3rem 0.6rem rgba(40, 40, 40, 0.12), -0.3rem -0.3rem 0.6rem rgba(40, 40, 40, 0.12);
+  border-radius: 1rem;
+}
+.Wrapper .Main .Product-container .Product-img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+.Wrapper .Main .Product-container .Product-description {
+  background-color: rgba(75, 51, 168, 0.8);
+  color: #ececec;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+.Wrapper .Main .Product-container .Product-description .Product-description-button {
+  background-color: #ececec;
+  color: #4b33a8;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  width: 90%;
+  box-shadow: 0rem 0rem 0.75rem rgb(40, 40, 40);
+  border: 1px solid rgb(10, 10, 10);
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.Wrapper .Main .Product-container .Product-description .Product-description-button:hover {
+  background-color: #4b33a8;
+  color: #ececec;
+}
+
+.Cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.Cart-container .Cart-empty, .Cart-container .Cart-buy {
+  color: #4b33a8;
+  display: none;
+}
+.Cart-container .Cart-product-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.Cart-container .Cart-product-container .Cart-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e2e2e2;
+  color: #4b33a8;
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0.15rem 0.15rem 0.3rem rgba(40, 40, 40, 0.12), -0.15rem -0.15rem 0.3rem rgba(40, 40, 40, 0.12);
+  font-weight: bold;
+  text-align: center;
+}
+.Cart-container .Cart-product-container .Cart-product-image {
+  width: 6.25rem;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+}
+.Cart-container .Cart-product-container .Cart-product small {
+  font-size: 14px;
+  font-weight: normal;
+}
+.Cart-container .Cart-product-container .Cart-product-delete {
+  color: #961818;
+  cursor: pointer;
+}
+.Cart-container .Cart-product-container .bi-trash3-fill {
+  font-size: 1.5rem;
+}
+.Cart-container .Cart-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.Cart-container .Cart-actions .button-empty {
+  background-color: #e2e2e2;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  color: #4b33a8;
+  font-weight: bold;
+  box-shadow: 0.15rem 0.15rem 0.3rem rgba(40, 40, 40, 0.12), -0.15rem -0.15rem 0.3rem rgba(40, 40, 40, 0.12);
+  border: 1px solid rgba(75, 51, 168, 0.45);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.Cart-container .Cart-actions .button-empty:hover {
+  background-color: #961818;
+  color: #ececec;
+}
+.Cart-container .Cart-actions .Cart-actions-right {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.Cart-container .Cart-actions .Cart-actions-right .Cart-actions-total {
+  display: flex;
+  gap: 0.5rem;
+  background-color: #e2e2e2;
+  padding: 1rem 2rem;
+  border-radius: 1rem 0 0 1rem;
+  color: #4b33a8;
+  font-weight: bold;
+  box-shadow: 0rem 0.1rem 0.2rem rgba(40, 40, 40, 0.2), 0rem -0.1rem 0.2rem rgba(40, 40, 40, 0.2);
+  height: 100%;
+}
+.Cart-container .Cart-actions .Cart-actions-right .button-buy {
+  background-color: #4b33a8;
+  padding: 1rem 2rem;
+  border-radius: 0 1rem 1rem 0;
+  color: #ececec;
+  font-weight: bold;
+  box-shadow: 0rem 0.15rem 0.3rem rgba(40, 40, 40, 0.3), 0rem -0.15rem 0.3rem rgba(40, 40, 40, 0.3);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  height: 100%;
+}
+.Cart-container .Cart-actions .Cart-actions-right .button-buy:hover {
+  background-color: #218838;
 }/*# sourceMappingURL=styles.css.map */
