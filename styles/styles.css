@@ -99,7 +99,6 @@ body {
 .u-button.isActive, .u-button:hover {
   background-color: #ececec;
   color: #4b33a8;
-  width: 100%;
 }
 .u-button.isActive::before, .u-button:hover::before {
   box-shadow: 0 1rem 0 #ececec; /* Cambia el color de la sombra al hacer hover o estar activo */
@@ -138,6 +137,14 @@ body {
   font-family: "Leckerli One", cursive;
   font-size: 1.375rem;
   margin-bottom: 1rem;
+}
+
+.Header-mobile {
+  display: none;
+}
+
+.close-menu {
+  display: none;
 }
 
 .Nav-list {
@@ -210,6 +217,10 @@ body {
   gap: 0.2rem;
 }
 
+.Product-description-title {
+  text-align: center;
+}
+
 .Product-description-button {
   background-color: #ececec;
   color: #4b33a8;
@@ -273,6 +284,15 @@ body {
   width: auto;
 }
 
+.Cart-product-delete:hover {
+  background-color: #ececec;
+  color: #4b33a8;
+  border-radius: 1rem;
+}
+.Cart-product-delete:hover::before, .Cart-product-delete:hover::after {
+  display: none;
+}
+
 .bi-trash3-fill {
   font-size: 1.5rem;
 }
@@ -296,6 +316,9 @@ body {
   border: 1px solid rgba(75, 51, 168, 0.45);
   transition: all 0.5s ease;
   cursor: pointer;
+}
+.button-empty::before, .button-empty::after {
+  display: none;
 }
 
 .button-empty:hover {
@@ -332,11 +355,117 @@ body {
   cursor: pointer;
   height: 100%;
 }
+.button-buy::before, .button-buy::after {
+  display: none;
+}
 
 .button-buy:hover {
   background-color: #218838;
+  color: #ececec;
 }
 
 .Cart-actions.u-d-none {
   display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .Product-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 725px) {
+  .u-button.isActive::before, .u-button.isActive::after, .u-button:hover::before, .u-button:hover::after {
+    display: none;
+  }
+  .Wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .Wrapper-aside {
+    position: fixed;
+    z-index: 2;
+    background-color: #4b33a8;
+    right: 0;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+  }
+  .isVisible {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .Main {
+    margin: 1rem;
+    margin-top: 0;
+    padding: 2rem;
+  }
+  .Product-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .Header-mobile {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Header-logo {
+    color: #e2e2e2;
+  }
+  .open-menu, .close-menu {
+    background-color: transparent;
+    color: #e2e2e2;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .Cart-product {
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+  .Cart-product-image {
+    width: 8.25rem;
+  }
+  .Cart-product small {
+    font-size: 1rem;
+  }
+  .Cart-product-total {
+    display: none;
+  }
+  .Cart-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .button-empty {
+    justify-content: center;
+  }
+  .Cart-actions-right {
+    flex-direction: column;
+  }
+  .Cart-actions-total {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    justify-content: center;
+  }
+  .button-buy {
+    justify-content: center;
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .Product-container {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=styles.css.map */

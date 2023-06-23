@@ -14,11 +14,20 @@
 
     <link rel="stylesheet" href="./styles/styles.css">
     <script defer src="./js/cart.js"></script>
-
+    <script defer src="./js/menu.js"></script>
 </head>
 <body>
     <div class="Wrapper">
-        <aside class="Wrapper-aside">
+        <header class="Header-mobile">
+            <h1 class="Header-logo">Leal<br>BookShop</h1>
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </header>
+        <aside class="Wrapper-aside isVisible">
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
             <header class="Header Wrapper-aside-header">
                 <h1 class="Header-logo">Leal<br>BookShop</h1>
             </header>
@@ -45,54 +54,10 @@
         <main class="Main Wrapper-aside-main">
             <h2 class="Main-title">Shopping Cart</h2>
             <section class="Cart-container Main-cartContainer">
-                <p class="Cart-empty">your bookcart is empty <i class="bi bi-emoji-frown-fill"></i></p>
-                <div class="Cart-product-container u-d-none">
-                    <div class="Cart-product">
-                        <img class="Cart-product-image" src="./assets/Software-development/Sd-book-1.jpg" alt="image1">
-                        <div class="Cart-product-title">
-                            <small>Title</small>
-                            <h3>Book 1</h3>
-                        </div>
-                        <div class="Cart-product-quantity">
-                            <small>Quantity</small>
-                            <h3>1</h3>
-                        </div>
-                        <div class="Cart-product-price">
-                            <small>Price</small>
-                            <h3>1000</h3>
-                        </div>
-                        <div class="Cart-product-total">
-                            <small>Total</small>
-                            <h3>1000</h3>
-                        </div>
-                        <button class="u-button Cart-product-delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </button>
-                    </div>
-                    <div class="Cart-product">
-                        <img class="Cart-product-image" src="./assets/Software-development/Sd-book-2.jpg" alt="image1">
-                        <div class="Cart-product-title">
-                            <small>Title</small>
-                            <h3>Book 2</h3>
-                        </div>
-                        <div class="Cart-product-quantity">
-                            <small>Quantity</small>
-                            <h3>1</h3>
-                        </div>
-                        <div class="Cart-product-price">
-                            <small>Price</small>
-                            <h3>1000</h3>
-                        </div>
-                        <div class="Cart-product-total">
-                            <small>Total</small>
-                            <h3>1000</h3>
-                        </div>
-                        <button class="u-button Cart-product-delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </button>
-                    </div>
+                <p id="Cart-empty" class="Cart-empty">your bookcart is empty <i class="bi bi-emoji-frown-fill"></i></p>
+                <div id="Cart-product-container" class="Cart-product-container u-d-none">
                 </div>
-                <div class="Cart-actions u-d-none">
+                <div id="Cart-actions" class="Cart-actions u-d-none">
                     <div class="Cart-actions-left">
                         <button class="u-button button-empty">Empty Cart</button>
                     </div>
@@ -104,7 +69,7 @@
                         <button class="u-button button-buy">Buy Now</button>
                     </div>
                 </div>
-                <p class="Cart-buy u-d-none">Thank you for your buying! <i class="bi bi-emoji-laughing-fill"></i></p>
+                <p id="Cart-buy" class="Cart-buy u-d-none">Thank you for your buying! <i class="bi bi-emoji-laughing-fill"></i></p>
             </section>
         </main>
     </div>

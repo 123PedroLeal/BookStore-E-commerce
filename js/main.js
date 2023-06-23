@@ -230,7 +230,7 @@ const productContainer = document.getElementById("Product-container");
 const categoryButtons = document.querySelectorAll(".button-category");
 const mainTitle = document.querySelector(".Main-title");
 let addButtons = document.querySelectorAll(".Product-description-button");
-const productsInCart = [];
+let productsInCart;
 const bookQuantity = document.querySelector(".book-quantity")
 
 function displayProducts(productType)
@@ -261,8 +261,6 @@ categoryButtons.forEach(button =>
 {
     button.addEventListener("click",(e)=>
     {
-        console.log(e.currentTarget.id);
-
         categoryButtons.forEach(button =>
         {
             button.classList.remove("isActive");
@@ -292,6 +290,18 @@ function actAddButtons()
     {
         button.addEventListener("click", addToCart)
     })
+}
+
+let productsInCartSC = localStorage.getItem("products-inCart");
+
+if(productsInCartSC)
+{
+    productsInCart = JSON.parse(productsInCartSC);
+    updateBooks();
+}
+else
+{
+    productsInCart = [];
 }
 
 function addToCart (e)
