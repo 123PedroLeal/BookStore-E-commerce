@@ -6,7 +6,8 @@
         "category": 
         {
             "name":"Software-Development",
-            "id":"software-development"
+            "id":"software-development",
+            "color": "#4b33a8"
         },
         "price": 1000
     },
@@ -17,7 +18,8 @@
         "category": 
         {
             "name":"Software-Development",
-            "id":"software-development"
+            "id":"software-development",
+            "color": "#4b33a8"
         },
         "price": 2000
     },
@@ -28,7 +30,8 @@
         "category": 
         {
             "name":"Software-Development",
-            "id":"software-development"
+            "id":"software-development",
+            "color": "#4b33a8"
         },
         "price": 3000
     },
@@ -39,7 +42,8 @@
         "category": 
         {
             "name":"Software-Development",
-            "id":"software-development"
+            "id":"software-development",
+            "color": "#4b33a8"
         },
         "price": 4000
     },
@@ -51,7 +55,8 @@
         "category": 
         {
             "name":"Data-Science",
-            "id":"data-science"
+            "id":"data-science",
+            "color":"#cc4400"
         },
         "price": 1000
     },
@@ -62,7 +67,8 @@
         "category": 
         {
             "name":"Data-Science",
-            "id":"data-science"
+            "id":"data-science",
+            "color":"#cc4400"
         },
         "price": 2000
     },
@@ -73,7 +79,8 @@
         "category": 
         {
             "name":"Data-Science",
-            "id":"data-science"
+            "id":"data-science",
+            "color":"#cc4400"
         },
         "price": 3000
     },
@@ -84,7 +91,8 @@
         "category": 
         {
             "name":"Data-Science",
-            "id":"data-science"
+            "id":"data-science",
+            "color":"#cc4400"
         },
         "price": 4000
     },
@@ -96,7 +104,8 @@
         "category": 
         {
             "name":"Math",
-            "id":"math"
+            "id":"math",
+            "color":"#5a3d28"
         },
         "price": 1000
     },
@@ -107,7 +116,8 @@
         "category": 
         {
             "name":"Math",
-            "id":"math"
+            "id":"math",
+            "color":"#5a3d28"
         },
         "price": 2000
     },
@@ -118,7 +128,8 @@
         "category": 
         {
             "name":"Math",
-            "id":"math"
+            "id":"math",
+            "color":"#5a3d28"
         },
         "price": 3000
     },
@@ -129,7 +140,8 @@
         "category": 
         {
             "name":"Math",
-            "id":"math"
+            "id":"math",
+            "color":"#5a3d28"
         },
         "price": 4000
     },
@@ -141,7 +153,8 @@
         "category": 
         {
             "name":"Phylosophy",
-            "id":"phylosophy"
+            "id":"phylosophy",
+            "color":"#6c1313"
         },
         "price": 1000
     },
@@ -152,7 +165,8 @@
         "category": 
         {
             "name":"Phylosophy",
-            "id":"phylosophy"
+            "id":"phylosophy",
+            "color":"#6c1313"
         },
         "price": 2000
     },
@@ -163,7 +177,8 @@
         "category": 
         {
             "name":"Phylosophy",
-            "id":"phylosophy"
+            "id":"phylosophy",
+            "color":"#6c1313"
         },
         "price": 3000
     },
@@ -174,7 +189,8 @@
         "category": 
         {
             "name":"Phylosophy",
-            "id":"phylosophy"
+            "id":"phylosophy",
+            "color":"#6c1313"
         },
         "price": 4000
     },
@@ -186,7 +202,8 @@
         "category": 
         {
             "name":"Cooking",
-            "id":"cooking"
+            "id":"cooking",
+            "color":"#43464B"
         },
         "price": 1000
     },
@@ -197,7 +214,8 @@
         "category": 
         {
             "name":"Cooking",
-            "id":"cooking"
+            "id":"cooking",
+            "color":"#43464B"
         },
         "price": 2000
     },
@@ -208,7 +226,8 @@
         "category": 
         {
             "name":"Cooking",
-            "id":"cooking"
+            "id":"cooking",
+            "color":"#43464B"
         },
         "price": 3000
     },
@@ -219,7 +238,8 @@
         "category": 
         {
             "name":"Cooking",
-            "id":"cooking"
+            "id":"cooking",
+            "color":"#43464B"
         },
         "price": 4000
     }

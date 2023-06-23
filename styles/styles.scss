@@ -2,9 +2,7 @@
     $paragraphs-font: 'Lato', sans-serif;
     $logo-font: 'Leckerli One', cursive;
 
-    // Example-colors
     $Color-main: #2c387d;
-    $Color-ligth-main: #445eaa;
     $Color-white: #ececec;
     $Color-gray: #e2e2e2;
     $Color-red: #961818;
@@ -209,10 +207,9 @@ body
 
 .Footer-text
 {
-    color: $Color-ligth-main;
+    color: $Color-white;
     font-size: 0.75rem;
 }
-
 
 .Main
 {
@@ -255,7 +252,8 @@ body
 
 .Product-description
 {
-    background-color: $Color-main;
+    backdrop-filter: blur(8px); 
+    background-color: (240, 230, 140, 0.5);
     color: $Color-white;
     padding: .75rem;
     border-radius: 1rem;
@@ -278,19 +276,23 @@ body
 .Product-description-button
 {
     background-color: $Color-white;
-    color: $Color-main;
+    color: rgb(10, 10, 10);
     padding: .25rem .75rem;
     border-radius: 1rem;
     width: 90%;
-    box-shadow: 0rem 0rem .75rem rgba(40, 40, 40, 1);
-    border: 1px solid rgba(10, 10, 10, 1);
+    border: 1.5px solid rgba(10, 10, 10, 1);
     cursor: pointer;
     transition: all ease 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3125rem
 }
 
 .Product-description-button:hover
 {
-    background-color: $Color-ligth-main;
+    transform: scale(1.1);
+    background-color: $Color-green;
     color: $Color-white;
 }
 

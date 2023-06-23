@@ -4,12 +4,14 @@ fetch("./js/books.json").then(response => response.json()).then(data =>
         productsArray = data;
         displayProducts(productsArray);
     })
+const wrapper = document.querySelector(".Wrapper");
 const productContainer = document.getElementById("Product-container");
+const productDescriptions = document.querySelectorAll(".Product-description");
 const categoryButtons = document.querySelectorAll(".button-category");
 const mainTitle = document.querySelector(".Main-title");
 let addButtons = document.querySelectorAll(".Product-description-button");
 let productsInCart;
-const bookQuantity = document.querySelector(".book-quantity")
+const bookQuantity = document.querySelector(".book-quantity");
 
 function displayProducts(productType)
 {
@@ -23,13 +25,14 @@ function displayProducts(productType)
          <div class="Product-description">
             <h3 class="Product-description-title">${product.title}</h3>
             <p class="Product-description-price">${product.price}</p>
-            <button class="Product-description-button" id="${product.id}">Add</button>
+            <button class="Product-description-button" id="${product.id}">Buy <i class="bi bi-hand-thumbs-up-fill"></i></button>
          </div>
         `
         productContainer.append(newProduct);
     })
 
     actAddButtons();
+    changeProductDescriptionBackgroundColor();
 }
 
 categoryButtons.forEach(button =>
@@ -46,12 +49,16 @@ categoryButtons.forEach(button =>
         {
             const productCategory = productsArray.find(product => product.category.id === e.currentTarget.id);
             mainTitle.innerText = productCategory.category.name;
+            mainTitle.style.color = productCategory.category.color;
+            wrapper.style.backgroundColor = productCategory.category.color;
             const productChoosed = productsArray.filter(product => product.category.id === e.currentTarget.id );
             displayProducts(productChoosed);
         }
         else
         {
             mainTitle.innerText = "All the products"
+            mainTitle.style.color = "#2c387d";
+            wrapper.style.backgroundColor = "#2c387d";
             displayProducts(productsArray);
         }
     })
@@ -104,4 +111,12 @@ function updateBooks()
 {
     let newbooks = productsInCart.reduce((acc,product)=> acc+product.quantity, 0);
     bookQuantity.innerText = newbooks;   
+}
+
+function changeProductDescriptionBackgroundColor() 
+{
+    productDescriptions.forEach(description => 
+    {
+      description.style.backgroundColor = productCategory.category.color;
+    });
 }
