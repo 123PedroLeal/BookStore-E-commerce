@@ -1,30 +1,13 @@
-    // Fonts
-    $headers-font: 'Playfair Display', serif; 
+    // Fonts 
     $paragraphs-font: 'Lato', sans-serif;
     $logo-font: 'Leckerli One', cursive;
 
-    // Fonts-color
-    $headers-color: #D4DBE3;
-    $paragraphs-color: #A8B2BB;
-    $contrast-color: #6B8DA4;
-    // Blocks
-    $main-background-color: #0D1117;
-    $containers-color: #161B22;
-    $alternative-color: #0B0F14;
-    $scrollbar-color: #090910;
-    $contrast-color: #6B8DA4;
-    // Buttons
-    $main-buttons-color: #1A3328;
-    $LinkedIn-button-color: #0A1A2B;
-    $Github-button-color:#131618;
-    $CV-button-color: #3B1818;
-
     // Example-colors
-    $Color-main: #4b33a8;
+    $Color-main: #2c387d;
+    $Color-ligth-main: #445eaa;
     $Color-white: #ececec;
     $Color-gray: #e2e2e2;
     $Color-red: #961818;
-    $Color-ligth-main: #785ce9;
     $Color-green: #218838;
 /* Reset CSS Instructions. */
 *
@@ -230,6 +213,7 @@ body
     font-size: 0.75rem;
 }
 
+
 .Main
 {
     background-color: $Color-white;
@@ -271,7 +255,7 @@ body
 
 .Product-description
 {
-    background-color: rgba(75, 51, 168, .8);
+    background-color: $Color-main;
     color: $Color-white;
     padding: .75rem;
     border-radius: 1rem;
@@ -287,6 +271,7 @@ body
 
 .Product-description-title
 {
+    opacity: 1;
     text-align: center;
 }
 
@@ -305,7 +290,7 @@ body
 
 .Product-description-button:hover
 {
-    background-color: $Color-main;
+    background-color: $Color-ligth-main;
     color: $Color-white;
 }
 
@@ -468,7 +453,7 @@ body
     display: none;
 }
 
-@media screen and (max-width: 850px)
+@media screen and (max-width: 950px)
 {
     .Product-container
     {
@@ -476,7 +461,7 @@ body
     }
 }
 
-@media screen and (max-width: 725px)
+@media screen and (max-width: 780px)
 {
     .u-button.isActive, .u-button:hover
     {
@@ -567,7 +552,7 @@ body
 
     .Cart-product-image
     {
-        width: 8.25rem;
+        width: 18rem;
     }
 
     .Cart-product small
@@ -610,7 +595,7 @@ body
     }
 }
 
-@media screen and (max-width: 400px)
+@media screen and (max-width: 470px)
 {
     .Product-container
     {

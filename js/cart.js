@@ -82,9 +82,27 @@ function deleteFromCart(e)
 
 emptyButton.addEventListener("click", () =>
 {
-    productsInCart.length = 0;
-    localStorage.setItem("products-inCart", JSON.stringify(productsInCart));
-    displayProductsInCart();
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => 
+      {
+        if (result.isConfirmed) 
+        {
+          Swal.fire(
+            'Deleted!',
+            'Your cart has been deleted.',
+          )
+          productsInCart.length = 0;
+            localStorage.setItem("products-inCart", JSON.stringify(productsInCart));
+            displayProductsInCart();
+        }
+      })
 });
 
 function updateMainTotal()
@@ -101,4 +119,9 @@ buyButton.addEventListener("click", () =>
     cartContainer.classList.add("u-d-none");
     cartActions.classList.add("u-d-none");
     cartBuy.classList.remove("u-d-none");
+    Swal.fire({
+        icon: 'success',
+        title: 'Thank you for your buying',
+        timer: 2000
+      })
 });

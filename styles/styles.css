@@ -98,7 +98,7 @@ body {
 
 .u-button.isActive, .u-button:hover {
   background-color: #ececec;
-  color: #4b33a8;
+  color: #2c387d;
 }
 .u-button.isActive::before, .u-button:hover::before {
   box-shadow: 0 1rem 0 #ececec; /* Cambia el color de la sombra al hacer hover o estar activo */
@@ -107,7 +107,7 @@ body {
   box-shadow: 0 -1rem 0 #ececec; /* Cambia el color de la sombra al hacer hover o estar activo */
 }
 .u-button.isActive .book-quantity, .u-button:hover .book-quantity {
-  background-color: #4b33a8;
+  background-color: #2c387d;
   color: #ececec;
 }
 
@@ -118,7 +118,7 @@ body {
 .Wrapper {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  background-color: #4b33a8;
+  background-color: #2c387d;
 }
 
 .Wrapper-aside {
@@ -159,13 +159,13 @@ body {
 
 .book-quantity {
   background-color: #ececec;
-  color: #4b33a8;
+  color: #2c387d;
   padding: 0 0.5rem;
   border-radius: 0.5rem;
 }
 
 .Footer-text {
-  color: #785ce9;
+  color: #445eaa;
   font-size: 0.75rem;
 }
 
@@ -178,7 +178,7 @@ body {
 }
 
 .Main-title {
-  color: #4b33a8;
+  color: #2c387d;
   font-family: "Leckerli One", cursive;
   text-align: center;
   font-size: 1.375rem;
@@ -203,7 +203,7 @@ body {
 }
 
 .Product-description {
-  background-color: rgba(75, 51, 168, 0.8);
+  background-color: #2c387d;
   color: #ececec;
   padding: 0.75rem;
   border-radius: 1rem;
@@ -218,12 +218,13 @@ body {
 }
 
 .Product-description-title {
+  opacity: 1;
   text-align: center;
 }
 
 .Product-description-button {
   background-color: #ececec;
-  color: #4b33a8;
+  color: #2c387d;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   width: 90%;
@@ -234,7 +235,7 @@ body {
 }
 
 .Product-description-button:hover {
-  background-color: #4b33a8;
+  background-color: #445eaa;
   color: #ececec;
 }
 
@@ -245,7 +246,7 @@ body {
 }
 
 .Cart-empty, .Cart-buy {
-  color: #4b33a8;
+  color: #2c387d;
 }
 
 .Cart-product-container {
@@ -259,7 +260,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #e2e2e2;
-  color: #4b33a8;
+  color: #2c387d;
   border-radius: 1rem;
   padding: 0.75rem 1.5rem;
   box-shadow: 0.15rem 0.15rem 0.3rem rgba(40, 40, 40, 0.12), -0.15rem -0.15rem 0.3rem rgba(40, 40, 40, 0.12);
@@ -286,7 +287,7 @@ body {
 
 .Cart-product-delete:hover {
   background-color: #ececec;
-  color: #4b33a8;
+  color: #2c387d;
   border-radius: 1rem;
 }
 .Cart-product-delete:hover::before, .Cart-product-delete:hover::after {
@@ -310,7 +311,7 @@ body {
   background-color: #e2e2e2;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  color: #4b33a8;
+  color: #2c387d;
   font-weight: bold;
   box-shadow: 0.15rem 0.15rem 0.3rem rgba(40, 40, 40, 0.12), -0.15rem -0.15rem 0.3rem rgba(40, 40, 40, 0.12);
   border: 1px solid rgba(75, 51, 168, 0.45);
@@ -338,14 +339,14 @@ body {
   background-color: #e2e2e2;
   padding: 1rem 2rem;
   border-radius: 1rem 0 0 1rem;
-  color: #4b33a8;
+  color: #2c387d;
   font-weight: bold;
   box-shadow: 0rem 0.1rem 0.2rem rgba(40, 40, 40, 0.2), 0rem -0.1rem 0.2rem rgba(40, 40, 40, 0.2);
   height: 100%;
 }
 
 .button-buy {
-  background-color: #4b33a8;
+  background-color: #2c387d;
   padding: 1rem 2rem;
   border-radius: 0 1rem 1rem 0;
   color: #ececec;
@@ -368,12 +369,12 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .Product-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 780px) {
   .u-button.isActive::before, .u-button.isActive::after, .u-button:hover::before, .u-button:hover::after {
     display: none;
   }
@@ -385,7 +386,7 @@ body {
   .Wrapper-aside {
     position: fixed;
     z-index: 2;
-    background-color: #4b33a8;
+    background-color: #2c387d;
     right: 0;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
     transform: translateX(-100%);
@@ -436,7 +437,7 @@ body {
     font-size: 1.5rem;
   }
   .Cart-product-image {
-    width: 8.25rem;
+    width: 18rem;
   }
   .Cart-product small {
     font-size: 1rem;
@@ -464,7 +465,7 @@ body {
     border-radius: 0 0 1rem 1rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 470px) {
   .Product-container {
     grid-template-columns: 1fr;
   }
